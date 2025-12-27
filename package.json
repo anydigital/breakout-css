@@ -1,6 +1,6 @@
 {
   "name": "@anydigital/breakout-css",
-  "version": "1.0.0-dev",
+  "version": "1.0.0-alpha",
   "description": "Modern CSS utilities to easily break-out / hang / pop-out images, iframes, or other figures from their parent container",
   "keywords": [
     "css",
