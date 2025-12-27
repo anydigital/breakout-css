@@ -13,8 +13,13 @@
       max-width: 125%;
       transform: translateX(-50%);
       margin-left: 50%;
+
+    }
+    &:is(.breakout-figure) {
+      width: 125% !important;
     }
   }
+
 }
 
 /* @TODO: Allow non-direct children. */
