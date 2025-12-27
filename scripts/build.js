@@ -11,7 +11,10 @@ const outputPath = path.join(__dirname, '..', 'dist', 'breakout.css');
   const css = await fs.readFile(srcPath, 'utf8');
   const result = await postcss([
     postcssNesting(),
-    postcssPresetEnv({ stage: 0, features: { 'nesting-rules': false } }),
+    postcssPresetEnv({ stage: 0, features: {
+      'nesting-rules': false,
+      'is-pseudo-class': { specificityMatchingName: '' },
+    } }),
   ]).process(css, { from: srcPath, to: outputPath });
 
   await fs.ensureDir(path.dirname(outputPath));

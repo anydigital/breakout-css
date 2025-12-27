@@ -7,8 +7,20 @@
   /* Direct children, potentially wrapped in <p> for Markdown support */
   & > *,
   & > p > * {
-    /* All the supported "figure" elements and custom utility class for other tags that need to be broken out */
-    &:is(img, figure, picture, video, audio, iframe, object, embed, canvas, .breakout-figure) {
+    &:is(
+      /* All the supported "figure" elements */
+      img,
+      figure,
+      picture,
+      video,
+      audio,
+      iframe,
+      object,
+      embed,
+      canvas,
+      /* Custom utility class for other tags that need to be broken out */
+      .breakout-figure
+    ) {
       width: auto; /* Support small images */
       max-width: 125%;
       transform: translateX(-50%);
