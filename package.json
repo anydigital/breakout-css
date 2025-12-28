@@ -11,19 +11,16 @@
     "tailwind-plugin",
     "utilities"
   ],
-  "style": "dist/breakout.css",
   "files": [
     "dist",
     "src"
   ],
   "exports": {
-    ".": {
-      "style": "./dist/breakout.css",
-      "import": "./src/breakout.css"
-    }
+    ".": "./src/breakout.css",
+    "./dist": "./dist/breakout.css"
   },
   "scripts": {
-    "build": "node scripts/build.js",
+    "build": "postcss src/breakout.css -o dist/breakout.css",
     "prepublishOnly": "npm run build"
   },
   "repository": {
@@ -38,7 +35,7 @@
   "devDependencies": {
     "fs-extra": "^11.2.0",
     "postcss": "^8.4.0",
-    "postcss-nesting": "^12.0.0",
+    "postcss-cli": "^11.0.0",
     "postcss-preset-env": "^10.6.0"
   }
 }
