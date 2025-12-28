@@ -40,17 +40,35 @@ The breakout effect automatically applies to:
 - `img`, `figure`, `picture`
 - `video`, `audio`
 - `iframe`, `object`, `embed`, `canvas`
-- Elements with `.breakout-figure` class
+- `table`, `pre`
+- Elements with `.breakout-item` or `.breakout-item-max` class
 
 ### Manual Breakout
+
+For elements that don't automatically break out, use the `.breakout-item` class:
 
 ```html
 <div class="breakout">
   <p>Regular content...</p>
   
-  <div class="breakout-figure">
+  <div class="breakout-item">
     <iframe src="https://example.com/embed"></iframe>
   </div>
+  
+  <p>More content...</p>
+</div>
+```
+
+### Force Maximum Width
+
+By default, breakout elements auto-size between 100% and 125% width. To force an element to always use the full 125% breakout width, use `.breakout-item-max`:
+
+```html
+<div class="breakout">
+  <p>Regular content...</p>
+  
+  <!-- This will always be 125% width, never smaller -->
+  <img src="wide-image.jpg" class="breakout-item-max" alt="Wide image">
   
   <p>More content...</p>
 </div>
