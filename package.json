@@ -11,15 +11,16 @@
     "tailwind-plugin",
     "utilities"
   ],
-  "main": "dist/breakout.css",
   "style": "dist/breakout.css",
   "files": [
     "dist",
     "src"
   ],
   "exports": {
-    ".": "./src/breakout.css",
-    "./dist": "./dist/breakout.css"
+    ".": {
+      "style": "./dist/breakout.css",
+      "import": "./src/breakout.css"
+    }
   },
   "scripts": {
     "build": "node scripts/build.js",
