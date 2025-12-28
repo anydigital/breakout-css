@@ -25,7 +25,7 @@
 /* Max out the width of the element */
 
 .breakout > .breakout-item-max:not(does-not-exist),.breakout > p > .breakout-item-max {
-      width: 125%;
+      width: 125% !important; /* @TODO: !important for cases like figure.breakout-item-max */
     }
 
 /* @TODO: Allow non-direct children. */

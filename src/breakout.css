@@ -32,8 +32,8 @@
     }
 
     /* Max out the width of the element */
-    &:is(.breakout-item-max) {
-      width: 125%;
+    &.breakout-item-max {
+      width: 125% !important; /* @TODO: !important for cases like figure.breakout-item-max */
     }
   }
 }
