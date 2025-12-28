@@ -4,10 +4,9 @@
   padding-left: 10%;
   padding-right: 10%;
 
-  /* Direct children, potentially wrapped in <p> for Markdown support */
-  & > *,
-  & > p > * {
-    &:is(
+  /* Direct children, or wrapped in <p> for Markdown support */
+  &, & > p {
+    & > :is(
       /* All the supported "figure" elements */
       img, 
       figure, 
@@ -22,20 +21,14 @@
       /* Custom utility class for other tags that need to be broken out */
       .breakout-figure
     ) {
-      width: auto; /* Support small images */
+      /* Mimic default img behavior to allow smaller width */
+      width: auto;
+      /* Allow the figure to grow to 125% of the container */
       max-width: 125%;
       transform: translateX(-50%);
       margin-left: 50%;
-
-    }
-    &:is(
-      table,
-      .breakout-figure
-    ) {
-      width: 125% !important;
     }
   }
-
 }
 
 /* @TODO: Allow non-direct children. */

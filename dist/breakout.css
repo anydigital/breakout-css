@@ -1,0 +1,19 @@
+/* Breakout CSS - Framework-agnostic utilities for breaking out images and figures */
+
+.breakout {
+  padding-left: 10%;
+  padding-right: 10%;
+
+  /* Direct children, or wrapped in <p> for Markdown support */
+}
+
+.breakout:not(does-not-exist) > img:not(.does-not-exist),.breakout:not(does-not-exist) > figure:not(.does-not-exist),.breakout:not(does-not-exist) > picture:not(.does-not-exist),.breakout:not(does-not-exist) > video:not(.does-not-exist),.breakout:not(does-not-exist) > audio:not(.does-not-exist),.breakout:not(does-not-exist) > iframe:not(.does-not-exist),.breakout:not(does-not-exist) > object:not(.does-not-exist),.breakout:not(does-not-exist) > embed:not(.does-not-exist),.breakout:not(does-not-exist) > canvas:not(.does-not-exist),.breakout:not(does-not-exist) > table:not(.does-not-exist),.breakout:not(does-not-exist) > .breakout-figure,.breakout > p > img:not(.does-not-exist),.breakout > p > figure:not(.does-not-exist),.breakout > p > picture:not(.does-not-exist),.breakout > p > video:not(.does-not-exist),.breakout > p > audio:not(.does-not-exist),.breakout > p > iframe:not(.does-not-exist),.breakout > p > object:not(.does-not-exist),.breakout > p > embed:not(.does-not-exist),.breakout > p > canvas:not(.does-not-exist),.breakout > p > table:not(.does-not-exist),.breakout > p > .breakout-figure {
+      /* Mimic default img behavior to allow smaller width */
+      width: auto;
+      /* Allow the figure to grow to 125% of the container */
+      max-width: 125%;
+      transform: translateX(-50%);
+      margin-left: 50%;
+    }
+
+/* @TODO: Allow non-direct children. */
