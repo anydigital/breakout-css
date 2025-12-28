@@ -10,25 +10,13 @@ Modern CSS utilities to easily break-out / hang / pop-out images, iframes, or ot
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@anydigital/breakout-css@1/dist/breakout.min.css">
 ```
 
-### Precompiled CSS
-
-```bash
-npm install @anydigital/breakout-css
-```
-
-Import the compiled CSS file directly into your project:
+### From Source
 
 ```css
-@import '@anydigital/breakout-css/dist/breakout.css';
+@import '@anydigital/breakout-css';
 ```
 
-### With Tailwind v4
-
-Tailwind v4 supports native CSS nesting, so you can import the source file directly:
-
-```css
-@import '@anydigital/breakout-css/src/breakout.css';
-```
+^ This is supported by Tailwind v4!
 
 ## Usage
 

@@ -18,9 +18,8 @@
     "src"
   ],
   "exports": {
-    ".": "./dist/breakout.css",
-    "./css": "./dist/breakout.css",
-    "./src": "./src/breakout.css"
+    ".": "./src/breakout.css",
+    "./dist": "./dist/breakout.css"
   },
   "scripts": {
     "build": "node scripts/build.js",
