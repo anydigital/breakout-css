@@ -16,6 +16,7 @@
     "src",
     "postcss.config.js"
   ],
+  "style": "./src/breakout.css",
   "exports": {
     ".": "./src/breakout.css",
     "./dist": "./dist/breakout.css"
