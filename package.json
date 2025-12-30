@@ -21,7 +21,7 @@
     "./dist": "./dist/breakout.css"
   },
   "scripts": {
-    "build": "postcss src/breakout.css -o dist/breakout.css",
+    "build": "postcss src/breakout.css --no-map -o dist/breakout.css",
     "prepublishOnly": "npm run build"
   },
   "repository": {
