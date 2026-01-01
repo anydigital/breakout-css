@@ -14,16 +14,14 @@
       table,
       pre,
       iframe, object, embed, video,
-      /* Custom utility class for other tags that need to be broken out */
+      /* Custom utility classes for other tags that need to be broken out */
       .breakout-item,
       .breakout-item-max
     ) {
-      /* display: inline-block; */
       width: fit-content;
       max-width: 125%;
-      /* transform: translateX(-50%);
-      margin-left: 50%; */
-      margin-right: calc(-50vw + 50%);
+      margin-left: 50%;
+      transform: translateX(-50%);
     }
 
     /* Max out the width of the element */
