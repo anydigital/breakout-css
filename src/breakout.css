@@ -24,6 +24,11 @@
       transform: translateX(-50%);
     }
 
+    /* Some elements don't know their best fit :) */
+    &:is(table, pre, .breakout-item) {
+      min-width: 80%;
+    }
+
     /* Max out the width of the element */
     &.breakout-item-max {
       width: 125% !important; /* @TODO: !important for cases like figure.breakout-item-max */
