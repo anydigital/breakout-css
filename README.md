@@ -36,11 +36,16 @@ Modern CSS utilities to easily break-out / hang / pop-out images, iframes, or ot
 
 ### Supported Elements
 
-The breakout effect automatically applies to:
-- `img`, `figure`, `picture`
-- `video`, `audio`
-- `iframe`, `object`, `embed`, `canvas`
+The breakout effect automatically applies to direct children or elements wrapped in `<p>` tags:
+
+**Inline blocks:**
+- `img`, `picture`, `figure`, `canvas`, `audio`
+
+**Larger blocks:**
 - `table`, `pre`
+- `iframe`, `object`, `embed`, `video`
+
+**Custom utility classes:**
 - Elements with `.breakout-item` or `.breakout-item-max` class
 
 ### Manual Breakout
@@ -61,7 +66,7 @@ For elements that don't automatically break out, use the `.breakout-item` class:
 
 ### Force Maximum Width
 
-By default, breakout elements auto-size between 100% and 125% width. To force an element to always use the full 125% breakout width, use `.breakout-item-max`:
+By default, breakout elements use `width: fit-content` with `max-width: 125%`, allowing them to size between 100% and 125% width based on their content. To force an element to always use the full 125% breakout width, use `.breakout-item-max`:
 
 ```html
 <div class="breakout">
@@ -74,15 +79,23 @@ By default, breakout elements auto-size between 100% and 125% width. To force an
 </div>
 ```
 
+Note: `.breakout-item-max` uses `width: 125% !important` to override default sizing.
+
 ## How It Works
 
-The breakout effect is achieved by:
+The `.breakout` container applies `padding-inline: 10%` to create space for breakout elements.
 
-1. Setting the element's width to 125% of its container
-2. Using `transform: translateX(-50%)` to shift it left by half its width
-3. Using `margin-left: 50%` to position it from the center of the container
+The breakout effect on elements is achieved by:
 
-This combination allows elements to extend beyond their parent container while remaining visually centered.
+1. Setting `width: fit-content` with `min-width: 100%` and `max-width: 125%` (inline blocks like `img`, `picture`, `figure`, `canvas`, and `audio` use `min-width: auto` instead)
+2. Using `margin-left: 50%` to position from the center of the container
+3. Using `transform: translateX(-50%)` to shift it left by half its width
+
+This combination allows elements to extend beyond their parent container (up to 125% width) while remaining visually centered.
+
+### Markdown Support
+
+The breakout effect works on direct children of `.breakout`, or elements wrapped in `<p>` tags (for Markdown compatibility where images are often wrapped in paragraphs).
 
 ## License
 
