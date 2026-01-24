@@ -1,6 +1,6 @@
 # breakout-css
 
-Modern CSS utilities to easily break-out / hang / pop-out images, iframes, or other "figures" from their parent container.
+Modern CSS utilities to easily break-out / hang / pop-out / bleed images, tables, iframes, and other figures from their parent container.
 
 ## Installation
 
@@ -47,7 +47,7 @@ The breakout effect automatically applies to direct children or elements wrapped
 
 **Larger blocks:**
 
-- `table`, `pre`
+- `table` (responsive with horizontal scroll support), `pre`
 - `iframe`, `object`, `embed`, `video`
 
 **Custom utility classes:**
@@ -116,7 +116,7 @@ The `.breakout` container applies `padding-inline: 10%` to create space for brea
 
 The breakout effect on elements is achieved by:
 
-1. Setting `width: fit-content` with `min-width: 100%` and `max-width: 125%` (inline blocks like `img`, `picture`, `figure`, `canvas`, and `audio` use `min-width: auto` instead)
+1. Setting `width: fit-content` with `min-width: 100%` and `max-width: 125%` (inline blocks like `img`, `picture`, `figure`, `canvas`, and `audio` use `min-width: auto` instead). Tables have special handling for responsiveness (full-bleed and horizontal scroll).
 2. Using `margin-left: 50%` to position from the center of the container
 3. Using `transform: translateX(-50%)` to shift it left by half its width
 
