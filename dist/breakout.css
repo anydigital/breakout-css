@@ -24,7 +24,107 @@
 /* Max out the width of the element */
 
 .breakout > .breakout-item-max:not(does-not-exist),.breakout > p > .breakout-item-max {
-      width: 125% !important; /* @TODO: !important for cases like figure.breakout-item-max */
+      width: 125% !important; /* !important is for cases like figure.breakout-item-max @TODO */
     }
 
-/* @TODO: Allow non-direct children. */
+.breakout-headings h2:not([class]),.breakout-headings h3:not([class]),.breakout-headings h4:not([class]),.breakout-headings hr {
+    position: relative;
+  }
+
+.breakout-headings h2:not([class])::before {
+      content: "";
+      display: block;
+      position: absolute;
+      background-color: rgba(0, 0, 0, 5%);
+    }
+
+.breakout-headings h3:not([class])::before {
+      content: "";
+      display: block;
+      position: absolute;
+      background-color: rgba(0, 0, 0, 5%);
+    }
+
+.breakout-headings h4:not([class])::before {
+      content: "";
+      display: block;
+      position: absolute;
+      background-color: rgba(0, 0, 0, 5%);
+    }
+
+.breakout-headings hr:not(.does-not-exist)::before {
+      content: "";
+      display: block;
+      position: absolute;
+      background-color: rgba(0, 0, 0, 5%);
+    }
+
+.breakout-headings h2:not([class])::before {
+      width: 10em;
+      right: 100%;
+      margin-right: 1rem;
+      height: 0.3em;
+      top: 50%;
+      transform: translateY(-50%);
+      background: linear-gradient(
+        to left,
+        rgba(0, 0, 0, 10%),
+        rgba(0, 0, 0, 5%) 10%,
+        transparent
+      );
+    }
+
+.breakout-headings h3:not([class])::before {
+      width: 10em;
+      right: 100%;
+      margin-right: 1rem;
+      height: 0.3em;
+      top: 50%;
+      transform: translateY(-50%);
+      background: linear-gradient(
+        to left,
+        rgba(0, 0, 0, 10%),
+        rgba(0, 0, 0, 5%) 10%,
+        transparent
+      );
+    }
+
+.breakout-headings h4:not([class])::before {
+      width: 10em;
+      right: 100%;
+      margin-right: 1rem;
+      height: 0.3em;
+      top: 50%;
+      transform: translateY(-50%);
+      background: linear-gradient(
+        to left,
+        rgba(0, 0, 0, 10%),
+        rgba(0, 0, 0, 5%) 10%,
+        transparent
+      );
+    }
+
+.breakout-headings hr {
+    height: 0.75rem;
+    border: none;
+    overflow: visible;
+  }
+
+.breakout-headings hr::before {
+      width: 100vw;
+      left: 50%;
+      height: 100%;
+      transform: translateX(-50%);
+    }
+
+.breakout-headings hr + h2::before {
+      display: none !important;
+    }
+
+.breakout-headings hr + h3::before {
+      display: none !important;
+    }
+
+.breakout-headings hr + h4::before {
+      display: none !important;
+    }
