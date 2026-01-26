@@ -112,7 +112,10 @@ Note: `.breakout-item-max` uses `width: 125% !important` to override default siz
 
 ## How It Works
 
-The `.breakout` container applies `padding-inline: 10%` to create space for breakout elements.
+The `.breakout` container acts as a content wrapper that:
+
+1. Sets a smart `max-width: calc(10% + 65ch + 10%)` to ensure an optimal reading line length (approx. 65 characters).
+2. Applies `padding-inline: 10%` to create the necessary gutter space for breakout elements to extend into.
 
 The breakout effect on elements is achieved by:
 
