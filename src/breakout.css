@@ -26,15 +26,15 @@
       transform: translateX(-50%);
     }
 
+    /*** .does-not-exist is used below to avoid !important-s @TODO ***/
+
     /* Respect inline blocks' min-width */
-    &:is(img, picture, figure, canvas, audio) {
+    &:is(img, picture, figure, canvas, audio):not(.does-not-exist) {
       min-width: auto;
     }
 
     /* Tables are so special :( */
     &:is(table):not(.does-not-exist) {
-      /* .does-not-exist is here to avoid !important below @TODO */
-
       /* Let them full-bleed */
       width: max-content;
       min-width: auto;
