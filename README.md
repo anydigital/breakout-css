@@ -1,3 +1,5 @@
+<!--section:css-->
+
 # breakout-css
 
 Modern CSS utilities to easily break-out / hang / pop-out / bleed images, tables, iframes, and other figures from their parent container.
@@ -133,6 +135,8 @@ The `.breakout-headings` utility works by:
 ### Markdown Support
 
 The breakout effect works on direct children of `.breakout`, or elements wrapped in `<p>` tags (for Markdown compatibility where images are often wrapped in paragraphs).
+
+<!--section-->
 
 ## License
 
